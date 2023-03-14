@@ -11,7 +11,7 @@ export default () => {
       <Box bgRepeat={"no-repeat"} bgSize="cover" bgImage={filedogeBg} borderRadius="24" padding={{ base: "18px", pc: "64px 64px 82px 64px" }}>
         <Stack justify={"center"}>
           <Flex alignItems={"center"} justify="center" marginBottom={{ pc: "28px", base: "14px" }}  >
-            <Title fontSize="32px" lineHeight="150%" fontWeight={800}>What is FileDoge?</Title>
+            <Title fontSize={{ base: '24px', pc: "32px" }} lineHeight="150%" fontWeight={500}>What is FileDoge?</Title>
           </Flex>
           <Box>
             <Flex alignItems={"center"} width="100%" justify="space-around" flexWrap={{ pc: "nowrap", base: "wrap" }}>

@@ -1,6 +1,6 @@
 
 
-import { Box, Button, Flex, Image, Input, Stack, Text, useToast } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Input, Stack, Text, useToast, Link } from "@chakra-ui/react";
 import AirdropDog from "./assets/airdrop_dog.svg";
 import { Title, ModWrapper, HighLightText } from "./common";
 import styled from "@emotion/styled";
@@ -58,7 +58,7 @@ export default () => {
             <Image src={AirdropDog} />
             <Title>Airdrop Of FIL Holder</Title>
           </Flex>
-          <Box width={'527px'} marginTop={{ pc: "32px", base: "16px" }}>
+          <Box width={{ base: '100%', pc: '527px' }} marginTop={{ pc: "32px", base: "16px" }}>
             <HighLightText fontSize={"20px"}>15%</HighLightText> of the total supply is airdropped to FIL holders in proportion to their holdings.
             <p>The community will take a snapshot of FIL holders' positions at a certain time, and deploy the smart contract for token airdrops. FIL holders can get the airdrops of FILEDOGE through the contract in proportion to their holdings.</p>
           </Box>
@@ -90,16 +90,20 @@ export default () => {
                 })
               }} height={{ pc: "48px", base: "40px" }} width={"100%"} bg={"#FFAD06"} color="white">Claim</Button>
               <div style={{ textAlign: 'center', fontSize: "12px", lineHeight: "150%", marginTop: "12px", color: "rgba(0,0,0,0.6)" }}>This airdrop smart contract is audited by certik, You can rest assured that the claim is safe.
-                <HighLightText display={"inline"} onClick={() => {
-                  toast({
-                    duration: 3000,
-                    render: () => {
-                      return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
-                        Comming Soon!
-                      </Box>
-                    }
-                  })
-                }}> Audit Report</HighLightText>
+                <HighLightText display={"inline"}>
+                  <Link display={"inline"} onClick={() => {
+                    toast({
+                      duration: 3000,
+                      render: () => {
+                        return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
+                          Comming Soon!
+                        </Box>
+                      }
+                    })
+                  }}>
+                    &nbsp;Audit Report
+                  </Link>
+                </HighLightText>
               </div>
             </Box>
           </FormWrapper>

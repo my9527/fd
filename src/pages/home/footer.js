@@ -94,7 +94,7 @@ const PCFooter = () => {
             <Logo color={useColorModeValue('gray.700', 'white')} />
           </Box>
           <Text color={"#FFFFFF"} fontStyle={"italic"} maxWidth={"138px"} fontWeight="300" fontSize="14px">
-            The First 100% Decentralized MeMe Token on Filecoin
+            The First 100% Decentralized MEME Token on Filecoin
           </Text>
         </Stack>
         <Stack align={'flex-start'}>
@@ -163,7 +163,7 @@ const MobileFooter = () => {
             <Logo color={useColorModeValue('gray.700', 'white')} />
           </Box>
           <Text color={"#FFFFFF"} fontStyle={"italic"} fontWeight="300" fontSize="14px">
-            The First 100% Decentralized MeMe Token on Filecoin
+            The First 100% Decentralized MEME Token on Filecoin
           </Text>
         </Stack>
         <Accordion fontSize={"14px"} width={{ base: "100%", pc: 0 }} defaultIndex={2} allowMultiple>

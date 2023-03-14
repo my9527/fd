@@ -34,28 +34,25 @@ import {
 import styled from '@emotion/styled';
 
 import BgPng from "./assets/bg2.png";
+import MbPng from "./assets/bg3.png";
 import Logo from "./assets/logo.svg";
 import PeopleSvg from './assets/people2.svg';
+import SortSvg from './assets/sort.svg';
 
-const PeopleImg = styled.img`
+const PeopleImg = styled(Image)`
   position: absolute;
-  left: 30px;
-  bottom: -34px;
 `;
 
-const Solgan = styled.div`
+const Solgan = styled(Box)`
   position: absolute;
-  bottom: 314px;
-  left: 440px;
   display: flex;
   flex-direction: column;
   width: 270px;
   color: #fff;
   font-weight: 500;
-  font-size: 30px;
 `;
 
-const BannerText = styled.div`
+const BannerText = styled(Box)`
   position: absolute;
   right: 20px;
   bottom: 60px;
@@ -64,29 +61,24 @@ const BannerText = styled.div`
   align-items: flex-end;
 `;
 
-const TextTitle = styled.div`
+const TextTitle = styled(Box)`
   display: flex;
   font-style: italic;
   font-weight: 700;
-  font-size: 84px;
   color: #fff;
 `;
 
-const LinearText = styled.div`
-  padding-right: 10px;
+const LinearText = styled(Text)`
   font-style: italic;
   font-weight: 700;
-  font-size: 84px;
   background: linear-gradient(262.33deg, #ACC2F6 -1.46%, #A4F3FB 91.29%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   text-fill-color: transparent;
 `;
 
-const TextDes = styled.div`
-  width: 340px;
+const TextDes = styled(Text)`
   text-align: right;
-  font-size: 24px;
   color: #fff;
   font-weight: 300;
   font-style: italic;
@@ -106,7 +98,7 @@ export default function WithSubnavigation() {
   });
 
   return (
-    <Box height={'728px'} width={{ base: '100vw' }} display="flex" justifyContent="center" bgImage={{ base: BgPng }} bgSize="cover" bgRepeat="no-repeat">
+    <Box height={{ base: '300px', pc: '728px' }} width={{ base: '100vw' }} display="flex" justifyContent="center" bgImage={{ base: MbPng, pc: BgPng }} bgSize={{ base: "100% 100%", pc: 'cover' }} bgRepeat="no-repeat">
       <Box width={{ base: '1200px' }} position="relative" >
         <Flex
           color={"white"}
@@ -118,13 +110,10 @@ export default function WithSubnavigation() {
             display={{ base: 'flex', md: 'none' }}>
             <IconButton
               ref={btnRef}
-              onClick={onOpen}
               icon={
                 <Box display={"inline-flex"} alignItems={'center'}>
-                  <Image src={Logo} w={8} h={8} marginLeft="0px" marginRight={"0.5rem"} cursor="pointer" />
-                  <b style={{ fontWeight: "900" }} cursor="pointer">FILEDOGE</b>
+                  <Image height={{ base: '32px' }} src={Logo} marginLeft="0px" marginRight={"0.5rem"} cursor="pointer" />
                 </Box>
-
               }
               variant={'ghost'}
               aria-label={'Toggle Navigation'}
@@ -168,35 +157,41 @@ export default function WithSubnavigation() {
               color={'white'}
               bg={'#FFAD06'}
               href={'#'}
-              height="38px"
+              height={{ base: '32px', pc: '38px' }}
               _hover={{
                 bg: 'pink.300',
               }}>
               Connect Wallet
             </Button>
+            <Image display={{ pc: 'none' }} src={SortSvg} onClick={onOpen} />
           </Stack>
         </Flex>
-        <PeopleImg src={PeopleSvg} />
-        <Solgan>
-          <Box fontSize={'64px'}>HI,</Box>
+        <PeopleImg
+          src={PeopleSvg}
+          height={{ base: '170px', pc: 'auto' }}
+          width="auto"
+          left={{ base: '10px', pc: '30px' }}
+          bottom={{ base: '1px', pc: '-34px' }}
+        />
+        <Solgan fontSize={{ base: '12px', pc: '30px' }} left={{ base: '150px', pc: '440px' }} bottom={{ base: '140px', pc: '314px' }}>
+          <Box fontSize={{ base: '24px', pc: '64px' }}>HI,</Box>
           <Box>Would you like</Box>
           <Box>a cup of</Box>
           <Box>Filedoge coffee？</Box>
         </Solgan>
         <BannerText>
-          <TextTitle>
-            FILE<LinearText>DOGE</LinearText>
+          <TextTitle fontSize={{ base: '30px', pc: '84px' }}>
+            FILE<LinearText paddingRight={{ base: '4px', pc: '10px' }} fontSize={{ base: '30px', pc: '84px' }}>DOGE</LinearText>
           </TextTitle>
-          <TextDes>The First 100% Decentralized MeMe Token on Filecoin</TextDes>
+          <TextDes width={{ base: '160px', pc: '340px' }} fontSize={{ base: '12px', pc: '24px' }}>The First 100% Decentralized MEME Token on Filecoin</TextDes>
         </BannerText>
       </Box>
-    </Box>
+    </Box >
   );
 }
 
 const goTo = (tid) => {
   var el = document.querySelector(`#${tid}`);
-  console.log("el", el);
   if (el) {
     el.scrollIntoView();
   }
@@ -224,10 +219,9 @@ const DesktopNav = () => {
                   e.preventDefault();
                   goTo(navItem.tid);
                 }}
-                color={index === 0 ? '#fff' : 'rgba(255, 255, 255, 0.6)'}
+                color={'rgba(255, 255, 255, 0.6)'}
                 _hover={{
-                  textDecoration: 'none',
-                  color: linkHoverColor,
+                  color: '#fff',
                 }}>
                 {navItem.label}
               </Link>
@@ -295,75 +289,50 @@ const MobileNav = ({ btnRef, onClose, isOpen }) => {
     <>
       <Drawer
         isOpen={isOpen}
-        placement='left'
+        placement='right'
         onClose={onClose}
       >
         <DrawerOverlay />
-        <DrawerContent>
+        <DrawerContent width={'100%'}>
           <DrawerCloseButton />
-
           <DrawerBody>
-            {NAV_ITEMS.map((navItem) => (
-              <MobileNavItem key={navItem.label} {...navItem} />
-            ))}
+            <Stack marginTop={'40px'}>
+              {NAV_ITEMS.map((navItem, index) => (
+                <MobileNavItem onClose={onClose} key={navItem.label} index={index} {...navItem} />
+              ))}
+            </Stack>
           </DrawerBody>
-
         </DrawerContent>
       </Drawer>
     </>
   );
 };
 
-const MobileNavItem = ({ label, children, href }) => {
-  const { isOpen, onToggle } = useDisclosure();
-
+const MobileNavItem = ({ onClose, label, tid, index, href, link }) => {
   return (
-    <Stack onClick={children && onToggle}>
-      <Flex
-        py={2}
-        as={Link}
-        href={href ?? '#'}
-        justify={'space-between'}
-        align={'center'}
-        _hover={{
-          textDecoration: 'none',
-        }}>
-        <Text
-          fontWeight={600}
-          color={useColorModeValue('gray.600', 'gray.200')}>
-          {label}
-        </Text>
-        {children && (
-          <Icon
-            as={ChevronDownIcon}
-            transition={'all .25s ease-in-out'}
-            transform={isOpen ? 'rotate(180deg)' : ''}
-            w={6}
-            h={6}
-          />
-        )}
-      </Flex>
-
-      <Collapse in={isOpen} animateOpacity style={{ marginTop: '0!important' }}>
-        <Stack
-          mt={2}
-          pl={4}
-          borderLeft={1}
-          borderStyle={'solid'}
-          borderColor={useColorModeValue('gray.200', 'gray.700')}
-          align={'start'}>
-          {children &&
-            children.map((child) => (
-              <Link key={child.label} py={2} href={child.href}>
-                {child.label}
-              </Link>
-            ))}
-        </Stack>
-      </Collapse>
-    </Stack>
+    <Link
+      padding={'12px 0'}
+      href={link ?? '#'}
+      fontSize={'14px'}
+      target={link ? '_blank' : '_self'}
+      fontWeight={index === 0 ? 500 : 400}
+      whiteSpace={"nowrap"}
+      onClick={(e) => {
+        if (link) return;
+        e.preventDefault();
+        goTo(tid);
+        onClose();
+      }}
+      color={'#000'}
+      lineHeight={'150%'}
+      _hover={{
+        color: '#FFAD06',
+        fontWeight: 500,
+      }}>
+      {label}
+    </Link>
   );
 };
-
 
 const NAV_ITEMS = [
   {

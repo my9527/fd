@@ -29,7 +29,7 @@ const SlipImage = ({ srcFront, srcBack, shadow }) => {
       width={{
         pc: "23%"
       }}
-      w={"43.2%"}
+      w={"47.2%"}
       marginBottom={{ base: "21px", pc: 0 }}
 
       style={{

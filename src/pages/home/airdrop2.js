@@ -19,8 +19,8 @@ export default () => {
     <ModWrapper tid="howtobuy" marginTop={{ base: "36px", pc: "70px" }} padding="28px 0 74px" bg={"rgba(255, 245, 220, 0.23)"} bgImage={{ base: "", pc: AirBg2 }} bgRepeat="no-repeat" bgSize="contain" >
       <Stack color={"rgba(0, 0, 0, 0.6)"}>
         <Flex justifyContent={"space-between"} flexWrap={{ base: "wrap-reverse", pc: "wrap" }} alignItems="center" >
-          <Box width={{ base: "100%", pc: "673px" }}>
-            <Title style={{ marginBottom: 28 }}>Fair Swap-How To Buy</Title>
+          <Box padding={{ base: '0 16px', pc: 'unset' }} width={{ base: "100%", pc: "673px" }}>
+            <Title style={{ marginBottom: 28 }}>How To Buy</Title>
             <div><HighLightText fontSize={"20px"}>44%</HighLightText> of the total supply enters the Swap pool of FILEDOGE with corresponding private keys destroyed for fair genesis.</div>
             <Text>After the official release of the FIL smart contract, the FILEDOGE/FIL trading pair will be added to the DEX of Swap, along with a liquidity pool of 440 trillion FILEDOGE and 1,000 FIL. The corresponding private keys will be destroyed.</Text>
             <Button onClick={() => {
@@ -34,17 +34,18 @@ export default () => {
               })
             }} height={{ base: "40px", pc: "48px" }} marginTop="24px" width={{ base: "100%", pc: "50%" }} bg={"#FFAD06"} color="white">Swap</Button>
             <div style={{ fontSize: "12px", lineHeight: "150%", marginTop: "12px", color: "rgba(0,0,0,0.6)" }}>
-              <div style={{ color: "rgba(0, 0, 0, 0.4)", fontSize: "12px" }}>This swap smart contract is audited by certik, You can rest assured that the swap is safe. <HighLightText>
-                <Link display={"inline"} onClick={() => {
-                  toast({
-                    duration: 3000,
-                    render: () => {
-                      return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
-                        Comming Soon!
-                      </Box>
-                    }
-                  })
-                }}>Audit Report</Link></HighLightText></div>
+              <div style={{ color: "rgba(0, 0, 0, 0.4)", fontSize: "12px" }}>This swap smart contract is audited by certik, You can rest assured that the swap is safe.
+                <HighLightText>
+                  <Link display={"inline"} onClick={() => {
+                    toast({
+                      duration: 3000,
+                      render: () => {
+                        return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
+                          Comming Soon!
+                        </Box>
+                      }
+                    })
+                  }}>&nbsp;Audit Report</Link></HighLightText></div>
             </div>
           </Box>
           <Image src={Dog3} maxWidth={{ base: "100%", pc: "416px" }} style={{ aspectRatio: "3/1", objectFit: "contain", height: "100%" }} marginBottom={{ base: "18px", pc: "0" }} />
