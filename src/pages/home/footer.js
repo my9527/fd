@@ -19,14 +19,15 @@ import {
   border,
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
-import FooterLogo from "./assets/footer_logo.png";
+import FooterLogo from "./assets/footer_logo.svg";
 
-import FooterTwitter from "./assets/footer_twitter.png";
-import FooterReddit from "./assets/footer_reddit.png";
-import CopyIcon from "./assets/copy.png";
+import FooterTwitter from "./assets/twitter2.svg";
+import FooterReddit from "./assets/reddit.svg";
+import CopyIcon from "./assets/copy.svg";
 import { HighLightText } from './common';
 
 const CopyRight = styled.div`
+  margin: 0 auto;
   max-width: 1200px;
   width: 100%;
   padding: 40px 0 20px;
@@ -71,7 +72,7 @@ const PCFooter = () => {
       await window.navigator.clipboard.writeText("f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y");
       toast({
 
-        duration: 1000,
+        duration: 2000,
         render: () => {
           return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
             Copy Success
@@ -98,24 +99,24 @@ const PCFooter = () => {
         </Stack>
         <Stack align={'flex-start'}>
           <ListHeader>CONTACT US</ListHeader>
-          <Link href={'#'}>hi@filedoge.io</Link>
-          <Link href={'#'}>partner@filedoge.io</Link>
+          <Link href={'mailto:hi@filedoge.io'}>hi@filedoge.io</Link>
+          <Link href={'mailto:partner@filedoge.io'}>partner@filedoge.io</Link>
         </Stack>
         <Stack align={'flex-start'}>
           <ListHeader>USEFUL LINKS</ListHeader>
           <Link target={'_blank'} href={'https://filecoin.io/'}>Filecoin Offical</Link>
-          <Link href={'https://filfox.info/'}>FilFox IO</Link>
+          <Link target={'_blank'} href={'https://filfox.info/'}>FilFox IO</Link>
         </Stack>
         <Stack align={'flex-start'}>
           <ListHeader>DONATION</ListHeader>
-          <Link href={'#'}>Filedoge donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }}>Comming soon</HighLightText></Link>
-          <Link href={'#'}>Filecoin donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }}>f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y<Image marginLeft={"4px"} transform={"translateY(25%)"} display={"inline-block"} onClick={hanldeCopy} width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText></Link>
+          <Link _hover={{ textDecoration: 'none' }}>Filedoge donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }} _hover={{ opacity: '0.8' }}>Comming soon</HighLightText></Link>
+          <Link _hover={{ textDecoration: 'none' }}>Filecoin donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }} _hover={{ opacity: '0.8' }} onClick={hanldeCopy}>f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y<Image marginLeft={"4px"} transform={"translateY(25%)"} display={"inline-block"} width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText></Link>
         </Stack>
         <Stack align={'flex-start'}>
           <ListHeader>JOIN COMMUNITY</ListHeader>
           <Flex alignItems={"center"}>
-            <Link href={'#'} marginRight={"1em"} ><Image _hover={{ opacity: "0.8" }} src={FooterReddit} /></Link>
-            <Link href={'#'}><Image _hover={{ opacity: "0.8" }} src={FooterTwitter} /></Link>
+            <Link target={'_blank'} href={'https://discord.gg/a83AMEY7mC'} marginRight={"1em"} ><Image _hover={{ opacity: "0.8" }} src={FooterReddit} /></Link>
+            <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image _hover={{ opacity: "0.8" }} src={FooterTwitter} /></Link>
           </Flex>
         </Stack>
       </SimpleGrid>
@@ -141,7 +142,7 @@ const MobileFooter = () => {
     try {
       await window.navigator.clipboard.writeText("f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y");
       toast({
-        duration: 1000,
+        duration: 2000,
         render: () => {
           return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
             Copy Success
@@ -233,8 +234,8 @@ const MobileFooter = () => {
             <AccordionPanel pb={4}>
 
               <Flex alignItems={"center"}>
-                <Link marginRight={"2em"} href={'https://discord.gg/a83AMEY7mC'} ><Image src={FooterReddit} /></Link>
-                <Link href={'https://twitter.com/Filedogetoken'}><Image src={FooterTwitter} /></Link>
+                <Link target={'_blank'} marginRight={"2em"} href={'https://discord.gg/a83AMEY7mC'} ><Image src={FooterReddit} /></Link>
+                <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image src={FooterTwitter} /></Link>
               </Flex>
             </AccordionPanel>
           </AccordionItem>

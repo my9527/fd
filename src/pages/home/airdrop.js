@@ -8,7 +8,7 @@ import styled from "@emotion/styled";
 import MetaMaskPng from "./assets/metamask.svg";
 import AuditPng from "./assets/certik.svg";
 import AirBg2 from "./assets/airdrop_p2_bg.png";
-import Dog3 from "./assets/airdrop_doge3.png";
+import Dog3 from "./assets/airdrop_doge3.svg";
 
 const FormWrapper = styled(Box)`
     border-radius: 24px;
@@ -56,7 +56,7 @@ export default () => {
         }} >
           <Flex justifyContent="flex-start" alignItems={"flex-end"} >
             <Image src={AirdropDog} />
-            <Title>Airdrop of FIL Holder</Title>
+            <Title>Airdrop Of FIL Holder</Title>
           </Flex>
           <Box width={'527px'} marginTop={{ pc: "32px", base: "16px" }}>
             <HighLightText fontSize={"20px"}>15%</HighLightText> of the total supply is airdropped to FIL holders in proportion to their holdings.
@@ -89,8 +89,17 @@ export default () => {
                   }
                 })
               }} height={{ pc: "48px", base: "40px" }} width={"100%"} bg={"#FFAD06"} color="white">Claim</Button>
-              <div style={{ textAlign: 'center', fontSize: "12px", lineHeight: "150%", marginTop: "12px", color: "rgba(0,0,0,0.6)" }}>This airdrop smart contract audit by certik,you can claim safely.
-                <HighLightText display={"inline"}>Audit report</HighLightText>
+              <div style={{ textAlign: 'center', fontSize: "12px", lineHeight: "150%", marginTop: "12px", color: "rgba(0,0,0,0.6)" }}>This airdrop smart contract is audited by certik, You can rest assured that the claim is safe.
+                <HighLightText display={"inline"} onClick={() => {
+                  toast({
+                    duration: 3000,
+                    render: () => {
+                      return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
+                        Comming Soon!
+                      </Box>
+                    }
+                  })
+                }}> Audit Report</HighLightText>
               </div>
             </Box>
           </FormWrapper>

@@ -2,7 +2,7 @@
 
 import { Box, Button, Flex, Image, Stack, Text } from "@chakra-ui/react";
 import filedogeBg from "./assets/filedoge_bg.png";
-import filedogeEq from "./assets/filedoge_eq.png";
+import filedogeEq from "./assets/filedoge_eq.svg";
 import { ModWrapper, Title } from "./common";
 
 export default () => {
@@ -18,10 +18,10 @@ export default () => {
               <Image width={{ base: "70%", pc: "32.25%" }} src={filedogeEq} />
               <Box flex={1} marginTop={{ base: "16px" }} marginBottom={{ base: "15px" }} width={{ base: "100%", pc: "50%" }} fontSize={"14px"} display={{ base: "flex" }} justifyContent={{ pc: "flex-end", base: "space-between" }} >
                 <Button onClick={() => {
-                  window.location.href = 'https://filedoge.io/Filedoge_woofpaper.pdf'
+                  window.open('https://filedoge.io/Filedoge_woofpaper.pdf', '_blank')
                 }} height={{ pc: "48px", base: "40px" }} width={{ base: "48%", pc: "149px" }} bgColor={"#FFAD06"} color={"white"}>Woofpaper</Button>
                 <Button onClick={() => {
-                  window.location.href = 'https://github.com/Filedoge'
+                  window.open('https://github.com/Filedoge', '_blank')
                 }} height={{ pc: "48px", base: "40px" }} border={"1px solid"} marginLeft={{ base: 0, pc: "19px" }} width={{ base: "48%", pc: "149px" }} variant="outline">Github</Button>
               </Box>
             </Flex>
@@ -31,9 +31,9 @@ export default () => {
               marginTop: "4px",
               marginBottom: "20px",
             }}>
-              In February 2023, FILEDOGE was born,it is a MEME token on Filecoin.
+              In February 2023, FILEDOGE was born, it is a MEME token on Filecoin.
               <br></br>
-              Based on FIL's smart contract, the FILEDOGE project made its fair release of Genesis. It is a 100% community-based project dedicated to bringing the spirit of DOGE's meme culture to the FIL ecology and beyond.
+              Based on FIL's smart contract, the FILEDOGE project made its fair release of Genesis. It is a 100% community-based project dedicated to bringing the spirit of DOGE's MEME culture to the FIL ecology and beyond.
             </p>
             <p style={{
             }}>

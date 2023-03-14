@@ -1,9 +1,7 @@
-import { Box, Flex, Image, Stack, Text } from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text, Link } from "@chakra-ui/react";
 import { HighLightText, ModWrapper, Title } from "./common";
-
-
-import Twitter from "./assets/twitter.png";
-import Reddit from "./assets/reddit.png";
+import Twitter from "./assets/twitter.svg";
+import Reddit from "./assets/discord.svg";
 
 import WhyFile from "./assets/why_chosse_filecoin.png";
 import MemoCalture from "./assets/meme_calture.png";
@@ -39,8 +37,12 @@ export default () => {
         <Title>Community</Title>
       </Flex>
       <Flex justifyContent={"center"} marginBottom={"40px"}>
-        <Image src={Twitter} marginRight={"2em"} />
-        <Image src={Reddit} marginLeft={"2em"} />
+        <Link marginRight={"2em"} target={'_blank'} href={'https://twitter.com/Filedogetoken'}>
+          <Image _hover={{ opacity: "0.8" }} src={Twitter} />
+        </Link>
+        <Link target={'_blank'} href={'https://discord.gg/a83AMEY7mC'}>
+          <Image _hover={{ opacity: "0.8" }} src={Reddit} marginLeft={"2em"} />
+        </Link>
       </Flex>
       <Box fontSize={{ base: "14px", pc: "16px" }} fontWeight={500} color={"rgba(0, 0, 0, 0.6)"}>
         <p>FILEDOGE legion is an innovative, adventurous, and talented community team. Although the R&D team, marketing personnel, designers, country managers, and administrators have not worked together before, the close collaboration within the FILEDOGE legion has allowed the initial dream to gradually come true. This is also an extremely open and inclusive community where you can:</p>
@@ -61,7 +63,7 @@ export default () => {
         <Box marginTop={{ pc: "0", base: "24px" }} borderRadius={"12px"} padding={{ base: "24px", pc: "40px" }} width={{ base: "100%", pc: "48%" }} bgRepeat={"no-repeat"} bgSize={"contain"} css={MemoP}>
           <Text marginBottom={"20px"} color={"#121318"} fontSize="20px" fontWeight={700}>MEME Culture</Text>
           <Box>
-            <p>The Bitcoin legion loves decentralization, and also loves meme culture.</p>
+            <p>The Bitcoin legion loves decentralization, and also loves MEME culture.</p>
             <p>In the Web 2.0 era, memes came into the spotlight, representing different cultural phenomena and showing us the magic power of communication that content from popular culture or subculture has.</p>
             <p>While in the era of Web 3.0, the combination of memes, decentralization, and crypto is going viral in the world, which is a new form out of the traditional narratives. As a new way to gain the right to speak, it allows everyone to participate in creating a shared culture, and is a passport to the new world.</p>
           </Box>

@@ -33,30 +33,22 @@ import {
 } from '@chakra-ui/icons';
 import styled from '@emotion/styled';
 
-import BannerPc from './assets/banner_pc.png';
-import BannerM from "./assets/banner_m.png"
-import BgPng from "./assets/bg1.png";
-import Logo from "./assets/logo.png";
-import PeopleSvg from './assets/people.svg';
-import FileCoin from './assets/filecoin.svg'
+import BgPng from "./assets/bg2.png";
+import Logo from "./assets/logo.svg";
+import PeopleSvg from './assets/people2.svg';
 
 const PeopleImg = styled.img`
   position: absolute;
-  left: 20px;
-  bottom: -40px;
-`;
-
-const FileCoinImg = styled.img`
-  position: absolute;
-  right: 180px;
-  top: 160px;
+  left: 30px;
+  bottom: -34px;
 `;
 
 const Solgan = styled.div`
+  position: absolute;
+  bottom: 314px;
+  left: 440px;
   display: flex;
   flex-direction: column;
-  margin-left: 430px;
-  margin-top: 30px;
   width: 270px;
   color: #fff;
   font-weight: 500;
@@ -114,8 +106,8 @@ export default function WithSubnavigation() {
   });
 
   return (
-    <Box width={{ base: '100vw' }} display="flex" justifyContent="center" bgImage={{ base: BgPng }} bgSize="cover" bgRepeat="no-repeat">
-      <Box width={{ base: '1200px' }} height={{ base: "80vw", pc: "48vw" }} position="relative" >
+    <Box height={'728px'} width={{ base: '100vw' }} display="flex" justifyContent="center" bgImage={{ base: BgPng }} bgSize="cover" bgRepeat="no-repeat">
+      <Box width={{ base: '1200px' }} position="relative" >
         <Flex
           color={"white"}
           py={{ base: 5 }}
@@ -145,15 +137,7 @@ export default function WithSubnavigation() {
           <Flex display={{ base: "none", pc: "flex" }} flex={{ base: 0, pc: 1 }} justify={{ base: 'center', pc: 'start' }}>
             <Flex alignItems={"center"} cursor="pointer"
               onClick={() => window.location.href = '/'}>
-              <Image src={Logo} w={43} h={43} />
-              <Text
-                textAlign={useBreakpointValue({ base: 'center', pc: 'center' })}
-                fontFamily={'heading'}
-                marginLeft="20px"
-                fontWeight={700}
-                color={"white"}>
-                FILEDOGE
-              </Text>
+              <Image src={Logo} />
             </Flex>
             <Flex flex={1} display={{ base: 'none', md: 'flex' }} ml={10}>
               <DesktopNav />
@@ -193,7 +177,6 @@ export default function WithSubnavigation() {
           </Stack>
         </Flex>
         <PeopleImg src={PeopleSvg} />
-        <FileCoinImg src={FileCoin} />
         <Solgan>
           <Box fontSize={'64px'}>HI,</Box>
           <Box>Would you like</Box>
@@ -233,6 +216,7 @@ const DesktopNav = () => {
               <Link
                 href={navItem.link ?? '#'}
                 fontSize={'14px'}
+                target={navItem.link ? '_blank' : '_self'}
                 fontWeight={index === 0 ? 500 : 400}
                 whiteSpace={"nowrap"}
                 onClick={(e) => {
@@ -397,7 +381,7 @@ const NAV_ITEMS = [
     tid: "genesis"
   },
   {
-    label: 'Airdrop of FIL Holder',
+    label: 'Airdrop Of FIL Holder',
     href: '#',
     tid: "airdrop"
   },

@@ -6,8 +6,8 @@ import BgL from "./assets/giving_l.png";
 import BgR from "./assets/giving_r.png";
 import Bg from "./assets/giving_bg.svg";
 
-import LogoL from "./assets/giving_logo_l.png";
-import LogoR from "./assets/giving_logo_r.png";
+import LogoL from "./assets/giving_logo_l.svg";
+import LogoR from "./assets/giving_logo_r.svg";
 
 
 export default () => {
@@ -15,13 +15,13 @@ export default () => {
   return (
     <ModWrapper marginTop={{ base: "42px", pc: "100px" }}>
       <Flex justifyContent={"center"} marginBottom={{ pc: "1em", base: "0" }}>
-        <Title>Thanks Giving</Title>
+        <Title>Thanksgiving</Title>
       </Flex>
       <Stack color={"rgba(0, 0, 0, 0.6)"} direction={['column', 'row']} flexWrap={{ base: "wrap", pc: "nowrap" }} justifyContent={"space-between"}>
         <Box zIndex={1000} marginLeft="10px" width={{ base: "100%", pc: "530px" }}  >
           <Image src={LogoL} marginBottom={"16px"} />
           <div>
-            FILEDOGE is an important part of FIL's ecology. As FILEDOGE’s founder Fredrick indicated, <HighLightText fontSize={"20px"}>20%</HighLightText> of the FILEDOGE supply will be sent to the lab as we believe that the lab will firmly stick to the concept of decentralization without violating any regulations, and will actively "burning " or properly manage the token."
+            FILEDOGE is an important part of FIL's ecology. As FILEDOGE’s founder Fredrick indicated, <HighLightText fontSize={"20px"}>20%</HighLightText> of the FILEDOGE supply will be sent to the lab as we believe that the lab will firmly stick to the concept of decentralization without violating any regulations, and will actively "burning " or properly manage the token.
           </div>
         </Box>
         <Box width={{ base: "100%", pc: "530px" }}  >
