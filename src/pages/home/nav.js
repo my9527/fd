@@ -177,7 +177,7 @@ export default function WithSubnavigation() {
           <Box fontSize={{ base: '24px', pc: '64px' }}>HI,</Box>
           <Box>Would you like</Box>
           <Box>a cup of</Box>
-          <Box>Filedoge coffee？</Box>
+          <Box>FILEDOGE coffee？</Box>
         </Solgan>
         <BannerText>
           <TextTitle fontSize={{ base: '30px', pc: '84px' }}>
@@ -336,7 +336,7 @@ const MobileNavItem = ({ onClose, label, tid, index, href, link }) => {
 
 const NAV_ITEMS = [
   {
-    label: "What is FileDoge?",
+    label: "What is FILEDOGE?",
     href: "filedoge",
     tid: "filedoge"
   },

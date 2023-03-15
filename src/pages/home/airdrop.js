@@ -73,7 +73,7 @@ export default () => {
               <FormText>Wallet Support</FormText> <Image src={MetaMaskPng} />
             </Flex>
             <Flex marginTop="19px" justifyContent={"space-between"}>
-              <FormText>Your Filedoge Airdrop</FormText> <span></span>
+              <FormText>Your FILEDOGE Airdrop</FormText> <span></span>
             </Flex>
             <Flex>
               <ClaimNumTxt>0.00</ClaimNumTxt>

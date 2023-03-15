@@ -5,13 +5,44 @@ import filedogeBg from "./assets/filedoge_bg.png";
 import filedogeEq from "./assets/filedoge_eq.svg";
 import { ModWrapper, Title } from "./common";
 
+const tokenAddress = '0x2646bb363851d31dca3de045e0eb63d0afeb427d';
+const tokenSymbol = 'FILEDOGE';
+const tokenDecimals = 18;
+const tokenImage = 'https://filedoge.io/assets/logo.svg';
+
 export default () => {
+
+  const addToMetaMask = async () => {
+    try {
+      const wasAdded = await window.ethereum.request({
+        method: 'wallet_watchAsset',
+        params: {
+          type: 'ERC20',
+          options: {
+            address: tokenAddress,
+            symbol: tokenSymbol,
+            decimals: tokenDecimals,
+            image: tokenImage,
+          },
+        },
+      });
+
+      if (wasAdded) {
+        console.log('Token added Successfully!');
+      } else {
+        console.log('Failed to add the token');
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  }
+
   return (
     <ModWrapper p={"0 0"} marginTop="-33px" tid="filedoge">
       <Box bgRepeat={"no-repeat"} bgSize="cover" bgImage={filedogeBg} borderRadius="24" padding={{ base: "18px", pc: "64px 64px 82px 64px" }}>
         <Stack justify={"center"}>
           <Flex alignItems={"center"} justify="center" marginBottom={{ pc: "28px", base: "14px" }}  >
-            <Title fontSize={{ base: '24px', pc: "32px" }} lineHeight="150%" fontWeight={500}>What is FileDoge?</Title>
+            <Title fontSize={{ base: '24px', pc: "32px" }} lineHeight="150%" fontWeight={500}>What is FILEDOGE?</Title>
           </Flex>
           <Box>
             <Flex alignItems={"center"} width="100%" justify="space-around" flexWrap={{ pc: "nowrap", base: "wrap" }}>
@@ -39,6 +70,13 @@ export default () => {
             }}>
               There are no centralized teams but only a level playing field that welcomes everyone.The community members of FILEDOGE legion are a bunch of adventurous lunatics, shouting “EAT ZERO OR RETURN TO ZERO!”
             </p>
+          </Box>
+          <Box cursor={'pointer'} onClick={addToMetaMask} marginTop={'20px !important'} padding={'24px'} border={'1px solid #E7EFFF'} borderRadius={'2px'} display={'flex'} justifyContent={'space-between'} fontWeight={500} fontSize={{ pc: '16px' }} flexDirection={{ base: 'column', pc: 'row' }}>
+            <Box display={'flex'} flexDirection={{ base: 'column', pc: 'row' }}>
+              <Box color={'rgba(0, 0, 0, 0.6)'}>FILEDOGE Contract Address</Box>
+              <Box cursor={'pointer'} color={'#000'} textDecoration={'underline'} marginLeft={{ base: '0', pc: '24px' }} _hover={{ opacity: 0.8 }}>0x2646bb363851d31dca3de045e0eb63d0afeb427d</Box>
+            </Box>
+            <Box marginTop={{ base: '12px !important', pc: '0 !important' }} color={'#FFAD06'} cursor='pointer' _hover={{ opacity: 0.8 }}>+ Add FILEDOGE MetaMask</Box>
           </Box>
         </Stack>
 

@@ -244,7 +244,7 @@ const MobileNavItem = ({ label, children, href }) => {
 
 const NAV_ITEMS = [
   {
-    label: "What is FileDoge?",
+    label: "What is FILEDOGE?",
   },
   {
     label: 'Woofpaper',

@@ -66,10 +66,9 @@ const PCFooter = () => {
     }
   });
 
-  const hanldeCopy = async (e) => {
-    e.preventDefault();
+  const hanldeCopy = async (text) => {
     try {
-      await window.navigator.clipboard.writeText("f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y");
+      await window.navigator.clipboard.writeText(text);
       toast({
 
         duration: 2000,
@@ -105,12 +104,12 @@ const PCFooter = () => {
         <Stack align={'flex-start'}>
           <ListHeader>USEFUL LINKS</ListHeader>
           <Link target={'_blank'} href={'https://filecoin.io/'}>Filecoin Offical</Link>
-          <Link target={'_blank'} href={'https://filfox.info/'}>FilFox IO</Link>
+          <Link target={'_blank'} href={'https://filfox.info/'}>FilFox INFO</Link>
         </Stack>
         <Stack align={'flex-start'}>
           <ListHeader>DONATION</ListHeader>
-          <Link _hover={{ textDecoration: 'none' }}>Filedoge donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }} _hover={{ opacity: '0.8' }}>Comming soon</HighLightText></Link>
-          <Link _hover={{ textDecoration: 'none' }}>Filecoin donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }} _hover={{ opacity: '0.8' }} onClick={hanldeCopy}>f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y<Image marginLeft={"4px"} transform={"translateY(25%)"} display={"inline-block"} width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText></Link>
+          <Link _hover={{ textDecoration: 'none' }}>FILEDOGE donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }} _hover={{ opacity: '0.8' }} onClick={() => hanldeCopy('0xA1A73D35e8141E6d36b0f7cad638bD98F5d718B4')}>0xA1A73D35e8141E6d36b0f7cad638bD98F5d718B4<Image marginLeft={"4px"} transform={"translateY(25%)"} display={"inline-block"} width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText></Link>
+          <Link _hover={{ textDecoration: 'none' }}>Filecoin donation address <HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap", textDecoration: "underline" }} _hover={{ opacity: '0.8' }} onClick={() => hanldeCopy('f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y')}>f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y<Image marginLeft={"4px"} transform={"translateY(25%)"} display={"inline-block"} width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText></Link>
         </Stack>
         <Stack align={'flex-start'}>
           <ListHeader>JOIN COMMUNITY</ListHeader>
@@ -138,9 +137,9 @@ const MobileFooter = () => {
     }
   });
 
-  const hanldeCopy = async () => {
+  const hanldeCopy = async (text) => {
     try {
-      await window.navigator.clipboard.writeText("f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y");
+      await window.navigator.clipboard.writeText(text);
       toast({
         duration: 2000,
         render: () => {
@@ -191,8 +190,8 @@ const MobileFooter = () => {
               </AccordionButton>
             </h2>
             <AccordionPanel >
-              <div><Link href={'#'}>Filecoin Offical</Link></div>
-              <div style={{ marginTop: "12px" }}><Link href={'#'}>Filescan IO</Link></div>
+              <div><Link target={'_blank'} href={'https://filecoin.io/'}>Filecoin Offical</Link></div>
+              <div style={{ marginTop: "12px" }}><Link target={'_blank'} href={'https://filfox.info/'}>FilFox INFO</Link></div>
             </AccordionPanel>
           </AccordionItem>
 
@@ -208,12 +207,12 @@ const MobileFooter = () => {
             </h2>
             <AccordionPanel >
               <div>
-                <Link href={'#'}>Filedoge donation address</Link>
-                <div><HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap" }}>Comming soon</HighLightText></div>
+                <Link href={'#'}>FILEDOGE donation address</Link>
+                <div><HighLightText style={{ maxWidth: "18em", whiteSpace: "pre-wrap" }} onClick={() => hanldeCopy('0xA1A73D35e8141E6d36b0f7cad638bD98F5d718B4')}>0xA1A73D35e8141E6d36b0f7cad638bD98F5d718B4<Image marginLeft={"4px"} transform={"translateY(25%)"} display={"inline-block"} width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText></div>
               </div>
               <div style={{ maxWidth: "18em", whiteSpace: "pre-wrap", marginTop: "12px" }}>
                 <Link>Filecoin donation address</Link>
-                <HighLightText onClick={hanldeCopy} >f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y <Image width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText>
+                <HighLightText onClick={() => hanldeCopy('f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y')} >f1onzpvnvvnb237uo4g7zvt3efckgexyp5otghh2y <Image width={"16px"} height={"16px"} src={CopyIcon}></Image></HighLightText>
               </div>
 
 
@@ -256,7 +255,7 @@ export default function LargeWithLogoLeft() {
     >
       <PCFooter />
       <MobileFooter />
-      <CopyRight>Copyright © 2023-2025 Filedoge Token</CopyRight>
+      <CopyRight>Copyright © 2023-2025 FILEDOGE Token</CopyRight>
     </Box>
   );
 }
