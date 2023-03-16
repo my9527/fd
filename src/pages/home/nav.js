@@ -23,7 +23,8 @@ import {
   DrawerContent,
   DrawerCloseButton,
   Image,
-  useToast
+  useToast,
+  Heading
 } from '@chakra-ui/react';
 import {
   HamburgerIcon,
@@ -61,7 +62,7 @@ const BannerText = styled(Box)`
   align-items: flex-end;
 `;
 
-const TextTitle = styled(Box)`
+const TextTitle = styled(Heading)`
   display: flex;
   font-style: italic;
   font-weight: 700;
@@ -180,7 +181,7 @@ export default function WithSubnavigation() {
           <Box>FILEDOGE coffee？</Box>
         </Solgan>
         <BannerText>
-          <TextTitle fontSize={{ base: '30px', pc: '84px' }}>
+          <TextTitle as="h1" fontSize={{ base: '30px', pc: '84px' }}>
             FILE<LinearText paddingRight={{ base: '4px', pc: '10px' }} fontSize={{ base: '30px', pc: '84px' }}>DOGE</LinearText>
           </TextTitle>
           <TextDes width={{ base: '160px', pc: '340px' }} fontSize={{ base: '12px', pc: '24px' }}>The First 100% Decentralized MEME Token on Filecoin</TextDes>

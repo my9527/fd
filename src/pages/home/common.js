@@ -1,10 +1,10 @@
-import { Text, Box } from "@chakra-ui/react"
+import { Text, Box, Heading } from "@chakra-ui/react"
 
 
 
 export const Title = ({ children, ...reset }) => {
   // font-family: "Ubuntu-Regular";
-  return <Text fontSize={{ base: "24px", pc: "32px" }} fontFamily={"Ubuntu-Medium"} color={"#000000"} fontWeight={500} lineHeight="150%" {...reset}>{children}</Text>
+  return <Heading as="h2" fontSize={{ base: "24px", pc: "32px" }} fontFamily={"Ubuntu-Medium"} color={"#000000"} fontWeight={500} lineHeight="150%" {...reset}>{children}</Heading>
 }
 
 export const ModWrapper = ({ children, tid, ...restProps }) => {

@@ -8,7 +8,7 @@ import { ModWrapper, Title } from "./common";
 const tokenAddress = '0x2646bb363851d31dca3de045e0eb63d0afeb427d';
 const tokenSymbol = 'FILEDOGE';
 const tokenDecimals = 18;
-const tokenImage = 'https://filedoge.io/assets/logo.svg';
+const tokenImage = 'https://filedoge.io/favicon.ico';
 
 export default () => {
 
@@ -76,7 +76,7 @@ export default () => {
               <Box color={'rgba(0, 0, 0, 0.6)'}>FILEDOGE Contract Address</Box>
               <Box cursor={'pointer'} color={'#000'} textDecoration={'underline'} marginLeft={{ base: '0', pc: '24px' }} _hover={{ opacity: 0.8 }}>0x2646bb363851d31dca3de045e0eb63d0afeb427d</Box>
             </Box>
-            <Box marginTop={{ base: '12px !important', pc: '0 !important' }} color={'#FFAD06'} cursor='pointer' _hover={{ opacity: 0.8 }}>+ Add FILEDOGE MetaMask</Box>
+            <Box marginTop={{ base: '12px !important', pc: '0 !important' }} color={'#FFAD06'} cursor='pointer' _hover={{ opacity: 0.8 }}>+ Add FILEDOGE To MetaMask</Box>
           </Box>
         </Stack>
 

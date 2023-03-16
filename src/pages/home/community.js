@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Stack, Text, Link } from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text, Link, Heading } from "@chakra-ui/react";
 import { HighLightText, ModWrapper, Title } from "./common";
 import Twitter from "./assets/twitter.svg";
 import Reddit from "./assets/discord.svg";
@@ -54,14 +54,14 @@ export default () => {
       </Box>
       <Flex justifyContent={"space-between"} flexWrap={"wrap"} marginTop={{ base: "42px", pc: "116px" }} >
         <Box borderRadius={"12px"} padding={{ base: "24px", pc: "40px" }} width={{ base: "100%", pc: "48%" }} bgRepeat={"no-repeat"} bgSize={"100%"} css={WhyP} >
-          <Text marginBottom={"20px"} color={"#121318"} fontSize="20px" fontWeight={700}>Why Chosse Filecoin?</Text>
+          <Heading as="h3" marginBottom={"20px"} color={"#121318"} fontSize="20px" fontWeight={700}>Why Chosse Filecoin?</Heading>
           <Box>
             <p>Our founder Fredrick is a fan of BTC, ETH and also FIL. We chose FIL because its FVM is fully compatible with EVM, making FIL as safe and sound as ETH. FIL also has an incomparable strength in storage, allowing the community to remain continuously decentralized.</p>
             <p>The FILEDOGE legion enthusiasts are convinced that with the launch of the FVM, countless smart contract-based eco-applications will blossom on FIL. FILEDOGE will be the most entertaining and adventurous application on FIL.</p>
           </Box>
         </Box>
         <Box marginTop={{ pc: "0", base: "24px" }} borderRadius={"12px"} padding={{ base: "24px", pc: "40px" }} width={{ base: "100%", pc: "48%" }} bgRepeat={"no-repeat"} bgSize={"contain"} css={MemoP}>
-          <Text marginBottom={"20px"} color={"#121318"} fontSize="20px" fontWeight={700}>MEME Culture</Text>
+          <Heading as="h3" marginBottom={"20px"} color={"#121318"} fontSize="20px" fontWeight={700}>MEME Culture</Heading>
           <Box>
             <p>The Bitcoin legion loves decentralization, and also loves MEME culture.</p>
             <p>In the Web 2.0 era, memes came into the spotlight, representing different cultural phenomena and showing us the magic power of communication that content from popular culture or subculture has.</p>

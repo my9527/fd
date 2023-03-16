@@ -17,6 +17,7 @@ import {
   AccordionIcon,
   useToast,
   border,
+  Heading
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
 import FooterLogo from "./assets/footer_logo.svg";
@@ -49,9 +50,9 @@ const Logo = (props) => {
 
 const ListHeader = ({ children }) => {
   return (
-    <Text fontWeight={'500'} whiteSpace={"nowrap"} color={"#FFFFFF"} fontSize={'14px'} mb={2}>
+    <Heading as="h3" fontWeight={'500'} whiteSpace={"nowrap"} color={"#FFFFFF"} fontSize={'14px'} mb={2}>
       {children}
-    </Text>
+    </Heading>
   );
 };
 

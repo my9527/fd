@@ -61,7 +61,7 @@ export default () => {
       <Box>
         <Flex alignItems={"baseline"} justifyContent="space-between" marginBottom="24px">
           <Title>Fair Genesis</Title>
-          <Link href="https://filedoge.io/Filedoge_woofpaper.pdf"><HighLightText>Know More &gt;</HighLightText></Link>
+          <Link target={'_blank'} href="https://filedoge.io/Filedoge_woofpaper.pdf"><HighLightText>Know More &gt;</HighLightText></Link>
         </Flex>
         <Box fontSize={{ pc: "16px", base: "14px" }} fontWeight={500} color={"rgba(0, 0, 0, 0.6)"}>
           <p>After coining 1,000 trillion tokens, we give 60% to the community and the remaining 40% to Filecoin Lab and Vitalik for "Burning". That's where the FILEDOGE project started.</p>
