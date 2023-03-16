@@ -8,7 +8,7 @@ import { ModWrapper, Title } from "./common";
 const tokenAddress = '0x2646bb363851d31dca3de045e0eb63d0afeb427d';
 const tokenSymbol = 'FILEDOGE';
 const tokenDecimals = 18;
-const tokenImage = 'https://filedoge.io/assets/logo.svg';
+const tokenImage = 'https://www.filedoge.io/assets/logo.svg';
 
 
 export default () => {
