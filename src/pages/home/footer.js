@@ -20,7 +20,7 @@ import {
   Heading
 } from '@chakra-ui/react';
 import styled from '@emotion/styled';
-import FooterLogo from "./assets/footer_logo.svg";
+import FooterLogo from "./assets/filedogeLogo.svg";
 
 import FooterTwitter from "./assets/twitter2.svg";
 import FooterReddit from "./assets/reddit.svg";
@@ -115,7 +115,7 @@ const PCFooter = () => {
         <Stack align={'flex-start'}>
           <ListHeader>JOIN COMMUNITY</ListHeader>
           <Flex alignItems={"center"}>
-            <Link target={'_blank'} href={'https://discord.gg/a83AMEY7mC'} marginRight={"1em"} ><Image _hover={{ opacity: "0.8" }} src={FooterReddit} /></Link>
+            <Link target={'_blank'} href={'https://discord.gg/JUpWjCmC2K'} marginRight={"1em"} ><Image _hover={{ opacity: "0.8" }} src={FooterReddit} /></Link>
             <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image _hover={{ opacity: "0.8" }} src={FooterTwitter} /></Link>
           </Flex>
         </Stack>
@@ -234,7 +234,7 @@ const MobileFooter = () => {
             <AccordionPanel pb={4}>
 
               <Flex alignItems={"center"}>
-                <Link target={'_blank'} marginRight={"2em"} href={'https://discord.gg/a83AMEY7mC'} ><Image src={FooterReddit} /></Link>
+                <Link target={'_blank'} marginRight={"2em"} href={'https://discord.gg/JUpWjCmC2K'} ><Image src={FooterReddit} /></Link>
                 <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image src={FooterTwitter} /></Link>
               </Flex>
             </AccordionPanel>

@@ -141,16 +141,9 @@ export default function WithSubnavigation() {
             direction={'row'}
             spacing={4}>
             <Button
-              onClick={() =>
-                toast({
-                  duration: 3000,
-                  render: () => {
-                    return <Box minWidth={"auto"} textAlign={"center"} color='#fff' p={3}>
-                      Comming Soon!
-                    </Box>
-                  }
-                })
-              }
+              onClick={() => {
+                window.location.href = '/swap'
+              }}
               as={'a'}
               display={{ base: 'inline-flex', pc: 'inline-flex' }}
               fontSize={'14px'}
@@ -162,7 +155,7 @@ export default function WithSubnavigation() {
               _hover={{
                 bg: 'pink.300',
               }}>
-              Connect Wallet
+              Launch App
             </Button>
             <Image display={{ pc: 'none' }} src={SortSvg} onClick={onOpen} />
           </Stack>
