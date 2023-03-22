@@ -40,7 +40,7 @@ export default () => {
         <Link marginRight={"2em"} target={'_blank'} href={'https://twitter.com/Filedogetoken'}>
           <Image _hover={{ opacity: "0.8" }} src={Twitter} />
         </Link>
-        <Link target={'_blank'} href={'https://discord.gg/JUpWjCmC2K'}>
+        <Link target={'_blank'} href={'https://discord.com/invite/FM2WY62FR4'}>
           <Image _hover={{ opacity: "0.8" }} src={Reddit} marginLeft={"2em"} />
         </Link>
       </Flex>
