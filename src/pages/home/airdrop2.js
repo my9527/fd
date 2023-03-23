@@ -30,7 +30,7 @@ export default () => {
             <div style={{ fontSize: "12px", lineHeight: "150%", marginTop: "12px", color: "rgba(0,0,0,0.6)" }}>
               <div style={{ color: "rgba(0, 0, 0, 0.4)", fontSize: "12px" }}>This smart contract is fork from Uniswap and is open source, You can rest assured that the swap is safe.
                 <HighLightText>
-                  <Link display={"inline"} href="https://github.com/Filedoge/Dex-Interface" target={'_blank'}>&nbsp;The source code &gt;&gt;</Link></HighLightText>
+                  <Link display={"inline"} href="https://github.com/Filedoge/Dex-Contract" target={'_blank'}>&nbsp;The source code &gt;&gt;</Link></HighLightText>
               </div>
             </div>
           </Box>
