@@ -141,16 +141,14 @@ export default function WithSubnavigation() {
             direction={'row'}
             spacing={4}>
             <Button
-              onClick={() => {
-                window.location.href = '/swap'
-              }}
+              target={'_blank'}
               as={'a'}
               display={{ base: 'inline-flex', pc: 'inline-flex' }}
               fontSize={'14px'}
               fontWeight={600}
               color={'white'}
               bg={'#FFAD06'}
-              href={'#'}
+              href={'https://www.filedoge.io/swap'}
               height={{ base: '32px', pc: '38px' }}
               _hover={{
                 bg: 'pink.300',
