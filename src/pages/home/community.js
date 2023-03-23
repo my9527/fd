@@ -2,6 +2,7 @@ import { Box, Flex, Image, Stack, Text, Link, Heading } from "@chakra-ui/react";
 import { HighLightText, ModWrapper, Title } from "./common";
 import Twitter from "./assets/twitter.svg";
 import Reddit from "./assets/discord.svg";
+import Telegram from "./assets/telegram.svg";
 
 import WhyFile from "./assets/why_chosse_filecoin.png";
 import MemoCalture from "./assets/meme_calture.png";
@@ -37,11 +38,14 @@ export default () => {
         <Title>Community</Title>
       </Flex>
       <Flex justifyContent={"center"} marginBottom={"40px"}>
-        <Link marginRight={"2em"} target={'_blank'} href={'https://twitter.com/Filedogetoken'}>
+        <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}>
           <Image _hover={{ opacity: "0.8" }} src={Twitter} />
         </Link>
         <Link target={'_blank'} href={'https://discord.com/invite/FM2WY62FR4'}>
-          <Image _hover={{ opacity: "0.8" }} src={Reddit} marginLeft={"2em"} />
+          <Image _hover={{ opacity: "0.8" }} src={Reddit} margin={"0 2em"} />
+        </Link>
+        <Link target={'_blank'} href={'https://t.me/+TSVjNqnUovczNjM1'}>
+          <Image _hover={{ opacity: "0.8" }} src={Telegram} />
         </Link>
       </Flex>
       <Box fontSize={{ base: "14px", pc: "16px" }} fontWeight={500} color={"rgba(0, 0, 0, 0.6)"}>

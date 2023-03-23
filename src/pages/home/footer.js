@@ -24,6 +24,7 @@ import FooterLogo from "./assets/filedogeLogo.svg";
 
 import FooterTwitter from "./assets/twitter2.svg";
 import FooterReddit from "./assets/reddit.svg";
+import Telegram from "./assets/telegram1.svg";
 import CopyIcon from "./assets/copy.svg";
 import { HighLightText } from './common';
 
@@ -117,6 +118,9 @@ const PCFooter = () => {
           <Flex alignItems={"center"}>
             <Link target={'_blank'} href={'https://discord.com/invite/FM2WY62FR4'} marginRight={"1em"} ><Image _hover={{ opacity: "0.8" }} src={FooterReddit} /></Link>
             <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image _hover={{ opacity: "0.8" }} src={FooterTwitter} /></Link>
+            <Link marginLeft={'12px'} target={'_blank'} href={'https://t.me/+TSVjNqnUovczNjM1'}>
+              <Image width={'22px'} _hover={{ opacity: "0.8" }} src={Telegram} />
+            </Link>
           </Flex>
         </Stack>
       </SimpleGrid>
@@ -236,6 +240,9 @@ const MobileFooter = () => {
               <Flex alignItems={"center"}>
                 <Link target={'_blank'} marginRight={"2em"} href={'https://discord.com/invite/FM2WY62FR4'} ><Image src={FooterReddit} /></Link>
                 <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image src={FooterTwitter} /></Link>
+                <Link marginLeft={'24px'} target={'_blank'} href={'https://t.me/+TSVjNqnUovczNjM1'}>
+                  <Image width={'22px'} src={Telegram} />
+                </Link>
               </Flex>
             </AccordionPanel>
           </AccordionItem>

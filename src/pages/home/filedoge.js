@@ -87,7 +87,7 @@ export default () => {
             </p>
             <p style={{
             }}>
-              There are no centralized teams but only a level playing field that welcomes everyone.The community members of FILEDOGE legion are a bunch of adventurous lunatics, shouting “EAT ZERO OR RETURN TO ZERO!”
+              There are no centralized teams but only a level playing field that welcomes everyone.The community members of FILEDOGE legion are a bunch of adventurous lunatics, shouting 「EAT ZERO OR RETURN TO ZERO!」
             </p>
           </Box>
           <Box marginTop={'20px !important'} padding={'24px'} border={'1px solid #E7EFFF'} borderRadius={'2px'} display={'flex'} justifyContent={'space-between'} fontWeight={500} fontSize={{ pc: '16px' }} flexDirection={{ base: 'column' }}>

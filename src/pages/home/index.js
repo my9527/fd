@@ -54,8 +54,8 @@ export default () => {
       <Nav />
       <FileDog />
       <FairGenesis />
-      <Airdrop />
       <Airdrop2 />
+      <Airdrop />
       <ThanksGiving />
       <Community />
       <RouteMap />
