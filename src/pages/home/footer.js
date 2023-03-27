@@ -27,6 +27,7 @@ import FooterReddit from "./assets/reddit.svg";
 import Telegram from "./assets/telegram1.svg";
 import CopyIcon from "./assets/copy.svg";
 import { HighLightText } from './common';
+import { discord, twitter, telegram } from '../../config';
 
 const CopyRight = styled.div`
   margin: 0 auto;
@@ -116,9 +117,9 @@ const PCFooter = () => {
         <Stack align={'flex-start'}>
           <ListHeader>JOIN COMMUNITY</ListHeader>
           <Flex alignItems={"center"}>
-            <Link target={'_blank'} href={'https://discord.com/invite/FM2WY62FR4'} marginRight={"1em"} ><Image _hover={{ opacity: "0.8" }} src={FooterReddit} /></Link>
-            <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image _hover={{ opacity: "0.8" }} src={FooterTwitter} /></Link>
-            <Link marginLeft={'12px'} target={'_blank'} href={'https://t.me/+TSVjNqnUovczNjM1'}>
+            <Link target={'_blank'} href={discord} marginRight={"1em"} ><Image _hover={{ opacity: "0.8" }} src={FooterReddit} /></Link>
+            <Link target={'_blank'} href={twitter}><Image _hover={{ opacity: "0.8" }} src={FooterTwitter} /></Link>
+            <Link marginLeft={'12px'} target={'_blank'} href={telegram}>
               <Image width={'22px'} _hover={{ opacity: "0.8" }} src={Telegram} />
             </Link>
           </Flex>
@@ -238,9 +239,9 @@ const MobileFooter = () => {
             <AccordionPanel pb={4}>
 
               <Flex alignItems={"center"}>
-                <Link target={'_blank'} marginRight={"2em"} href={'https://discord.com/invite/FM2WY62FR4'} ><Image src={FooterReddit} /></Link>
-                <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}><Image src={FooterTwitter} /></Link>
-                <Link marginLeft={'24px'} target={'_blank'} href={'https://t.me/+TSVjNqnUovczNjM1'}>
+                <Link target={'_blank'} marginRight={"2em"} href={discord} ><Image src={FooterReddit} /></Link>
+                <Link target={'_blank'} href={twitter}><Image src={FooterTwitter} /></Link>
+                <Link marginLeft={'24px'} target={'_blank'} href={telegram}>
                   <Image width={'22px'} src={Telegram} />
                 </Link>
               </Flex>

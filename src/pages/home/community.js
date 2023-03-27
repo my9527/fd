@@ -7,7 +7,7 @@ import Telegram from "./assets/telegram.svg";
 import WhyFile from "./assets/why_chosse_filecoin.png";
 import MemoCalture from "./assets/meme_calture.png";
 import { css } from "@emotion/react";
-
+import { discord, twitter, telegram } from '../../config';
 
 const WhyP = css`
 font-style: normal;
@@ -38,13 +38,13 @@ export default () => {
         <Title>Community</Title>
       </Flex>
       <Flex justifyContent={"center"} marginBottom={"40px"}>
-        <Link target={'_blank'} href={'https://twitter.com/Filedogetoken'}>
+        <Link target={'_blank'} href={twitter}>
           <Image _hover={{ opacity: "0.8" }} src={Twitter} />
         </Link>
-        <Link target={'_blank'} href={'https://discord.com/invite/FM2WY62FR4'}>
+        <Link target={'_blank'} href={discord}>
           <Image _hover={{ opacity: "0.8" }} src={Reddit} margin={"0 2em"} />
         </Link>
-        <Link target={'_blank'} href={'https://t.me/+TSVjNqnUovczNjM1'}>
+        <Link target={'_blank'} href={telegram}>
           <Image _hover={{ opacity: "0.8" }} src={Telegram} />
         </Link>
       </Flex>

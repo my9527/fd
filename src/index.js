@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import { hydrateRoot, createRoot } from 'react-dom/client';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react'
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -14,13 +14,21 @@ const override = {
 
 const theme = extendTheme(override);
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+const _App = () => (
   <React.StrictMode>
     <ChakraProvider theme={theme} >
       <App />
     </ChakraProvider>
   </React.StrictMode>
-);
+)
+
+const rootElement = document.getElementById('root');
+
+if (rootElement.hasChildNodes()) {
+  hydrateRoot(rootElement, <_App />);
+} else {
+  const root = createRoot(rootElement);
+  root.render(<_App />);
+}
 
 reportWebVitals();
