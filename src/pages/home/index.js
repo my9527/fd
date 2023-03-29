@@ -11,6 +11,7 @@ import ThanksGiving from "./thanks";
 import Community from "./community";
 import RouteMap from "./route_map";
 import Footer from "./footer";
+import AMADialog from "../../comonents/AMADialog";
 
 import FloatNavIcon from "./assets/float_nav.png";
 import { useEffect, useState } from "react";
@@ -61,6 +62,7 @@ export default () => {
       <RouteMap />
       <Footer />
       <FloatNav />
+      <AMADialog />
     </div>
   )
 }
