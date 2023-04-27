@@ -99,7 +99,7 @@ export default function WithSubnavigation() {
   });
 
   return (
-    <Box height={{ base: '300px', pc: '728px' }} width={{ base: '100vw' }} display="flex" justifyContent="center" bgImage={{ base: MbPng, pc: BgPng }} bgSize={{ base: "100% 100%", pc: 'cover' }} bgRepeat="no-repeat">
+    <Box height={{ base: '298px', pc: '674px' }} width={{ base: '100vw' }} display="flex" justifyContent="center" bgImage={{ base: MbPng, pc: BgPng }} bgSize={{ base: "100% 100%", pc: 'cover' }} bgRepeat="no-repeat">
       <Box width={{ base: '1200px' }} position="relative" >
         <Flex
           color={"white"}
@@ -148,7 +148,7 @@ export default function WithSubnavigation() {
               fontWeight={600}
               color={'white'}
               bg={'#FFAD06'}
-              href={'https://www.filedoge.io/swap'}
+              href={'https://www.filedoge.io/swap/#/swap'}
               height={{ base: '32px', pc: '38px' }}
               _hover={{
                 bg: 'pink.300',
@@ -352,8 +352,11 @@ const NAV_ITEMS = [
     tid: "howtobuy"
   },
   {
-    label: 'Community',
-    href: '#',
-    tid: "community"
+    label: 'LinkTree',
+    link: 'https://linktr.ee/filedoge',
+  },
+  {
+    label: 'Docs',
+    link: 'https://docs.filedoge.io/',
   },
 ];

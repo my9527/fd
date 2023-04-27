@@ -25,9 +25,10 @@ import FooterLogo from "./assets/filedogeLogo.svg";
 import FooterTwitter from "./assets/twitter2.svg";
 import FooterReddit from "./assets/reddit.svg";
 import Telegram from "./assets/telegram1.svg";
+import Youtubers from "./assets/youtuber_s.svg";
 import CopyIcon from "./assets/copy.svg";
 import { HighLightText } from './common';
-import { discord, twitter, telegram } from '../../config';
+import { discord, twitter, telegram, youtuber } from '../../config';
 
 const CopyRight = styled.div`
   margin: 0 auto;
@@ -121,6 +122,9 @@ const PCFooter = () => {
             <Link target={'_blank'} href={twitter}><Image _hover={{ opacity: "0.8" }} src={FooterTwitter} /></Link>
             <Link marginLeft={'12px'} target={'_blank'} href={telegram}>
               <Image width={'22px'} _hover={{ opacity: "0.8" }} src={Telegram} />
+            </Link>
+            <Link marginLeft={'12px'} target={'_blank'} href={youtuber}>
+              <Image width={'26px'} src={Youtubers} _hover={{ opacity: "0.8" }} />
             </Link>
           </Flex>
         </Stack>
@@ -243,6 +247,9 @@ const MobileFooter = () => {
                 <Link target={'_blank'} href={twitter}><Image src={FooterTwitter} /></Link>
                 <Link marginLeft={'24px'} target={'_blank'} href={telegram}>
                   <Image width={'22px'} src={Telegram} />
+                </Link>
+                <Link marginLeft={'24px'} target={'_blank'} href={youtuber}>
+                  <Image width={'28px'} src={Youtubers} _hover={{ opacity: "0.8" }} />
                 </Link>
               </Flex>
             </AccordionPanel>

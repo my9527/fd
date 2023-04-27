@@ -3,11 +3,12 @@ import { HighLightText, ModWrapper, Title } from "./common";
 import Twitter from "./assets/twitter.svg";
 import Reddit from "./assets/discord.svg";
 import Telegram from "./assets/telegram.svg";
+import Youtuber from "./assets/youtuber.svg";
 
 import WhyFile from "./assets/why_chosse_filecoin.png";
 import MemoCalture from "./assets/meme_calture.png";
 import { css } from "@emotion/react";
-import { discord, twitter, telegram } from '../../config';
+import { discord, twitter, telegram, youtuber } from '../../config';
 
 const WhyP = css`
 font-style: normal;
@@ -46,6 +47,9 @@ export default () => {
         </Link>
         <Link target={'_blank'} href={telegram}>
           <Image _hover={{ opacity: "0.8" }} src={Telegram} />
+        </Link>
+        <Link target={'_blank'} href={youtuber}>
+          <Image _hover={{ opacity: "0.8" }} src={Youtuber} marginLeft={"2em"} />
         </Link>
       </Flex>
       <Box fontSize={{ base: "14px", pc: "16px" }} fontWeight={500} color={"rgba(0, 0, 0, 0.6)"}>

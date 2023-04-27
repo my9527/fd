@@ -11,6 +11,7 @@ import ThanksGiving from "./thanks";
 import Community from "./community";
 import RouteMap from "./route_map";
 import Footer from "./footer";
+import Supports from './supports';
 import AMADialog from "../../comonents/AMADialog";
 
 import FloatNavIcon from "./assets/float_nav.png";
@@ -54,6 +55,7 @@ export default () => {
     <div style={{ position: "relative", overflowX: "hidden" }}>
       <Nav />
       <FileDog />
+      <Supports />
       <FairGenesis />
       <Airdrop2 />
       <Airdrop />
