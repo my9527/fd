@@ -37,7 +37,7 @@ export default () => {
     }
   });
   return (
-    <ModWrapper tid="supports" >
+    <ModWrapper tid="supports" marginTop={{ base: '32px', pc: '0px' }}>
       <Box>
         <Flex alignItems={"baseline"} justifyContent="space-between" marginBottom="24px">
           <Title>They Support Us</Title>
@@ -72,7 +72,7 @@ export default () => {
             }
           })
         } />
-        <Link href="http://filefox.info/" target="_blank">
+        <Link href="https://filfox.info/" target="_blank">
           <Img src={Svg12} />
         </Link>
         <Link href="https://twitter.com/Filecoin_Daily_" target="_blank">
@@ -84,7 +84,8 @@ export default () => {
         <Link href="https://metaera.media/" target="_blank">
           <Img src={Svg2} />
         </Link>
-        <Img src={Svg4} />
+        <Box width="67px"></Box>
+        {/* <Img src={Svg4} /> */}
       </Box>
     </ModWrapper>
   );

@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Stack, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Image, Stack, Text, Button, Link } from "@chakra-ui/react";
 import { ModWrapper, Title, HighLightText } from "./common";
 
 
@@ -39,9 +39,9 @@ export default () => {
         <Box css={DescCss} fontSize="16px" fontWeight={500}>
           <p>As a decentralized cryptocurrency project, there is no centralized team deciding the future development of FILEDOGE. Everything is left to the community. What journey FILEDOGE will eventually take is a topic to be imagined. Let's imagine:</p>
           <br />
-          <div>1. Create a DEX, we have already launched it and you can access it at https://www.filedoge.io/swap. As designed, 5/6 of the fees in the DEX will be used as rewards for liquidity providers, while <HighLightText>1/6</HighLightText> will be used as income for FILEDOGE holders, which will be used for repurchasing FILEDOGE to boost the coin price and move into a <HighLightText>deflationary</HighLightText> state.</div>
+          <div>1. Create a DEX, we have already launched it and you can access it at <HighLightText><Link href="https://www.filedoge.io/swap/#/swap" target="_blank">https://www.filedoge.io/swap/#/swap</Link></HighLightText>. As designed, 5/6 of the fees in the DEX will be used as rewards for liquidity providers, while <HighLightText>1/6</HighLightText> will be used as income for FILEDOGE holders, which will be used for repurchasing FILEDOGE to boost the coin price and move into a <HighLightText>deflationary</HighLightText> state.</div>
           <p>
-            2.After the fair launch was completed, due to the rise in coin price, there were still 80 trillion FILLEDOGE tokens that were planned to be added to the liquidity pool. In order to distribute these tokens fairly to the community members, we developed the farm function. By adding liquidity and staking LP tokens, you can earn additional farm rewards in addition to receiving 5/6 of the DEX trading fees. The farm output time is consistent with the filecoin block generation time, which is 30 seconds per block. The reward comes from the remaining tokens after the launch. The farm function is now live and available at https://www.filedoge.io/swap/#/farm.
+            2.After the fair launch was completed, due to the rise in coin price, there were still 80 trillion FILLEDOGE tokens that were planned to be added to the liquidity pool. In order to distribute these tokens fairly to the community members, we developed the farm function. By adding liquidity and staking LP tokens, you can earn additional farm rewards in addition to receiving 5/6 of the DEX trading fees. The farm output time is consistent with the filecoin block generation time, which is 30 seconds per block. The reward comes from the remaining tokens after the launch. The farm function is now live and available at <HighLightText><Link href="https://www.filedoge.io/swap/#/farm" target="_blank">https://www.filedoge.io/swap/#/farm</Link></HighLightText>.
           </p>
           <p>3. FILEDOGE legion members are super passionate gamers. As a MEME cryptocurrency project, FILEDOGE is a good birthplace of games.</p>
           <p>4. Games are naturally linked with NFTs. FILEDOGE, which comes with the attributes of MEME culture, has its own advantage in the field of NFTs.</p>
