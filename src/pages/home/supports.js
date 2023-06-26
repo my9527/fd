@@ -13,6 +13,7 @@ import Svg9 from './assets/supports/9.svg';
 import Svg10 from './assets/supports/10.svg';
 import Svg11 from './assets/supports/11.svg';
 import Svg12 from './assets/supports/12.svg';
+import Filscan from './assets/supports/filscan.svg';
 
 const Img = styled(Image)`
   width: 130px;
@@ -49,6 +50,9 @@ export default () => {
         </Link>
         <Link href="https://t.me/KuCoin_Memecoins" target="_blank">
           <Img src={Svg10} />
+        </Link>
+        <Link href="https://filscan.io/home/" target="_blank">
+          <Img src={Filscan} />
         </Link>
         <Link href="https://www.tokenpocket.pro/" target="_blank">
           <Img src={Svg9} />

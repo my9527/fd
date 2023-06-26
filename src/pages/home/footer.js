@@ -108,6 +108,7 @@ const PCFooter = () => {
         <Stack align={'flex-start'}>
           <ListHeader>USEFUL LINKS</ListHeader>
           <Link target={'_blank'} href={'https://filecoin.io/'}>Filecoin Offical</Link>
+          <Link target={'_blank'} href={'https://filscan.io/'}>Filscan</Link>
           <Link target={'_blank'} href={'https://filfox.info/'}>FilFox INFO</Link>
         </Stack>
         <Stack align={'flex-start'}>
