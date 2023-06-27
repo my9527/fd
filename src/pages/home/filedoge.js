@@ -51,7 +51,7 @@ export default () => {
             decimals: 18
           },
           rpcUrls: ["https://filfox.info/rpc/v1", "https://rpc.ankr.com/filecoin, https://filecoin-mainnet.chainstacklabs.com/rpc/v1"],
-          blockExplorerUrls: ["https://filfox.info/en"],
+          blockExplorerUrls: ["https://filscan.io/"],
         },
       ],
     });
