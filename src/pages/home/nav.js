@@ -343,7 +343,7 @@ const NAV_ITEMS = [
   },
   {
     label: 'Airdrop Of FIL Holder',
-    href: '#',
+    link: 'https://cert-api.salusec.io/api/v1/salus/contract/certificate/full/Filedoge_audit_report_2023-07-19.pdf',
     tid: "airdrop"
   },
   {
